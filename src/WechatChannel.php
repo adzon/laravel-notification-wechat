@@ -24,10 +24,10 @@ class WechatChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        //$response = [a call to the api of your notification send]
+        $response = '';
 
-//        if ($response->error) { // replace this by the code need to check for errors
-//            throw CouldNotSendNotification::serviceRespondedWithAnError($response);
-//        }
+        if ($response->error) { // replace this by the code need to check for errors
+            throw CouldNotSendNotification::serviceRespondedWithAnError($response);
+        }
     }
 }
