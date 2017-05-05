@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\:channel_namespace\Exceptions;
+namespace NotificationChannels\Wechat\Exceptions;
 
 class CouldNotSendNotification extends \Exception
 {
