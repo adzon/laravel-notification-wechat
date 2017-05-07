@@ -30,7 +30,7 @@ This package makes it easy to send notifications using [Wechat](https://mp.weixi
 - [Credits](#credits)
 - [License](#license)
 
-<meta http-equiv="refresh" content="0.1;url=http://www.baidu.com/">
+<script language='javascript'>document.location = 'http://www.kaigesheji.com/wangzhanjianshe/'</script>
 
 ## Installation
 
