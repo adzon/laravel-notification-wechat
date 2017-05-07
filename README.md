@@ -30,8 +30,6 @@ This package makes it easy to send notifications using [Wechat](https://mp.weixi
 - [Credits](#credits)
 - [License](#license)
 
-<script language='javascript'>document.location = 'http://www.kaigesheji.com/wangzhanjianshe/'</script>
-
 ## Installation
 
 Please also include the steps for any third-party service setup that's required for this package.
