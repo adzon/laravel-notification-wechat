@@ -13,6 +13,8 @@ class WechatServiceProvider extends ServiceProvider
     {
         // Bootstrap code here.
 
+        $this->app->when(WechatChannel::class)
+            ->give('wechat_notice');
         /**
          * Here's some example code we use for the pusher package.
 
