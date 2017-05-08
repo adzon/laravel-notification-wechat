@@ -31,13 +31,17 @@ class WechatChannel
         $message = $notification->toWechat($notifiable)->toArray();
         $data = Arr::get($message, 'data'); //获取消息的参数,
 
-        $news = new News([
-            'title'       => '有新的送车任务生成',
-            'description' => "test",
-            'url'   => "http://l.zuhaoche.cn/staff/send_car/",
-            'image' => "https://avatars1.githubusercontent.com/u/1472352?v=3&s=40",
-        ]);
-        $result = $this->app->staff->message($news)->to($open_id)->send();
+        $templateId = $data['templateId'];
+        $url = $data['url'];
+        $result = $this->app->notice->uses($templateId)->withUrl($url)->andData($data['data'])->andReceiver($open_id)->send();
+
+//        $news = new News([
+//            'title'       => $data['title'],
+//            'description' => $data['message'],
+//            'url'   => $data['url'],
+//            'image' => $data['image'],
+//        ]);
+//        $result = $this->app->staff->message($news)->to($open_id)->send();
         //TODO 增加异常
     }
 }
