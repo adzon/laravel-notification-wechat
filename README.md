@@ -1,10 +1,12 @@
-Use this repo as a skeleton for your new channel, once you're done please submit a Pull Request on [this repo](https://github.com/adzon/new-channels) with all the files.
+Laravel的notifications使用起来很舒服，但是找了下网上没有使用微信来做通知的包，所以自己做了一个。
 
-Here's the latest documentation on Laravel 5.3 Notifications System: 
+不了解notifications是什么的，可以在官方文档中去了解：
 
 https://laravel.com/docs/master/notifications
 
-# A Boilerplate repo for contributions
+有问题请邮件联系我： 76762@qq.com
+
+# Laravel的微信通知
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/adzon/laravel-notification-wechat.svg?style=flat-square)](https://packagist.org/packages/adzon/laravel-notification-wechat)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -15,50 +17,33 @@ https://laravel.com/docs/master/notifications
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/adzon/laravel-notification-wechat/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/adzon/laravel-notification-wechat/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/adzon/laravel-notification-wechat.svg?style=flat-square)](https://packagist.org/packages/adzon/laravel-notification-wechat)
 
-This package makes it easy to send notifications using [Wechat](https://mp.weixin.qq.com) with Laravel 5.4.
+本项目可以在 Laravel 5.4中使用 [Wechat](https://mp.weixin.qq.com) 来通知客户。
 
 ## Contents
 
-- [Installation](#installation)
-	- [Setting up the :service_name service](#setting-up-the-:service_name-service)
-- [Usage](#usage)
-	- [Available Message methods](#available-message-methods)
-- [Changelog](#changelog)
-- [Testing](#testing)
-- [Security](#security)
-- [Contributing](#contributing)
+- [安装说明](#安装说明)
+- [使用说明](#使用说明)
+- [更新日志](#更新日志)
 - [Credits](#credits)
 - [License](#license)
 
-## Installation
+## 安装说明
 
-Please also include the steps for any third-party service setup that's required for this package.
-
-### Setting up the :service_name service
-
-Optionally include a few steps how users can set up the service.
-
-## Usage
-
-Some code examples, make it clear how to use the package
-
-### Available methods
-
-A list of all available options
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
+```bash
+composer require adzon/laravel-notification-wechat
 ```
 
-## Security
+## 使用说明
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+```bash
+php artisan make:notification NewInvoice
+```
+
+NewInvoice文件内容参见 demo/NewInvoice.php
+
+## 更新日志
+
+请直接参见commit提交～～～
 
 ## Contributing
 
@@ -66,7 +51,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [:author_name](https://github.com/adzon)
+- [adzon](https://github.com/adzon)
+- [执行力就是挨个搞](http://www.huleping.com/)
 - [All Contributors](../../contributors)
 
 ## License
