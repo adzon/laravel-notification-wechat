@@ -24,7 +24,9 @@ class WechatChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (! $open_id = $notifiable->routeNotificationFor('Wechat')) {
+        $open_id = $notifiable->routeNotificationFor('Wechat');
+
+        if (!$open_id || strlen($open_id) < 20 ) {
             return;
         }
 
